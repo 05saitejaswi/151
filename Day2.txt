@@ -1,0 +1,76 @@
+1)what is IAAS?
+infrastructure as a service
+infrastructure: a collection of hardware and software that need to enable the cloud.
+they give the only infrastructure to us reaming all we have to maintain, virtualization, servers, storage, networking these things will be maintained by the servers 
+eg:AWS,GCP,azure
+
+2) what is PAAS?
+a)platform as a service
+in which the clients we should maintain the application and the data, remaining will be maintained by the Paas
+eg:Google App Engine, aws elastic beanstalk
+
+3)what is SAAS?
+a) everything will be maintained by the cloud vendors, we have to just use it, its an independent platform 
+eg:gmail in that everything is automatic we have to do the work what we need like the sending mails
+  all google apps are examples
+
+4)what is public?
+a)it will be deployed by the third-party cloud providers, they will have all things like software/infrastructure/application so that they  can share to hundred or thousands of people
+it can be used by anyone, pay as we go offers
+
+5)what is private?
+a)which can be seen by certain people, who have sensitive data, if they want to share to the particular amount of ppl, they use private
+
+6)what is Hybride?
+a)public+private
+which provide the both services, becoz of this we can work accordly
+
+7)what is a region?
+a)every region has its unique code, its a city .in single region all az are inter connected
+
+8)what is avaliablilty zone?
+a)it's a continuous datacenter where the data can arrange in categories within some regions
+An Availability Zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity in an AWS Region.
+it  has its power infrastructure, the distance between each az is 100km
+but by default, they are connected to each other
+
+
+9)what is webserver?
+a)its a software that runs on the  same computer, the webserver is to store, process and deliver web pages to the users,
+intercommunication with HTTP
+ex:tomcat, apache,smt,ftp,iis
+
+10)different type of hostings?
+a)shared hosting:rent for some time and host it, many ppl using one hosting
+ 
+vps hosting:  virtual private servers its also similar to shared but there thre will be some capacity, they cant ealy distub the other webapp or something that runing using thsi hosting
+dedicated hosting: its dedicate to their application to host
+
+cloud hosting:its the most efficient and the popular servers instead of single physysical multiple connncetion is better, if one get doen we can use the others 
+it can be high scalable
+
+11) what is protocol?
+a)when the client wants to conncet to the server they need some rules to communicate ammong them selfs
+it gets the data and sends back to it via get method ,usiually they do with  http
+
+12)what is datacenter?
+a)purpose of collecting, storing, processing, distributing or allowing access to large amounts of data.
+
+
+https://youtu.be/_pddKYARoPY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

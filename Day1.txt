@@ -1,0 +1,44 @@
+
+1)what are roles?
+a) roles are those which gives temporary access keys to access some specific task
+roles are used policy to grant access from s3 to ec2 server
+
+2)what are policys?
+a) the policy is the set of instructions like to whom we assign, and are the actions they need to do, which services they have to use, and we can give the name of buckets, we can limit their action on our bucket. all the permissions, this all will be written in JSON format
+
+3)can we host dynamic website in s3?
+a)yes, we can host the dynamic website using  route53,
+first, we have to create bucket next we have to create a folder inside folders where we have to pass the code, we have to check the bucket has  permission  accessed or not, next choose the static hosting
+next use route 53 where we have to create a URL(short), and we have to write the domain name then add to name server, do record settings.
+
+4)what is s3?
+a) large unlimitted storage , which store everything in objects
+used for hosting ,backup ,longterm storage,
+Cross Region Replication
+
+5)differnts between aws and other hosting sites?
+a)in aws u can run ur own servers,
+Scalability: in aws there is very less  traffic.
+Flexibility: high flexibility by allowing its users to select programming language, web application programs, and operating system.
+Cost Effective:as it offers a useful features with low cost
+Speed
+
+6)diff types of using s3 otherthan console?
+a)cli comands
+  Python wrapper
+
+7)what is IAAS(basically give only the invracstructuer, they dont care about what u do with that infrastructe)
+a)iaas:infrastructure as a service thevender(aws/azure) they provide only infrastructure only (inframenas , only the  comute,network,storage,security)
+maning and maintaing the infrastructure is the only work of mine
+(full control on database)but some time it will not take its application
+
+8)what is paas?
+a)I have an application and i need a a RDS paas;
+use  the db.
+problem in paas is we cant customise it the application
+  
+9)what is saas?
+no need to configure anything u have just use it
+google apps
+
+

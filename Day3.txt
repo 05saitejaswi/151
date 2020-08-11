@@ -1,0 +1,56 @@
+hosting a dynamic website in s3nis not a goos practice ,s3 doesnt support server side script such as php/dotnet/jsp, fro dynamic website there are other resources to host.we can use s3 console to hosta single web page 
+
+
+Low Cost:pay as u go ,flexible pricing structure
+Availability:Amazon S3 gives you 99.99% availability that will protect your data.
+Security:Data stored in Amazon is secure by default because only owner and bucket have access to Amazon S3 resources. It provides encryption for both secure storage and secure transit.
+Simple Data Transfer: many options for Cloud Data Migration,simple to transfer a large amount of data to Amazon S3 or out of Amazon S3.we no need to worrie about the hardware prb or network or power
+Easy to manage : s3 provides data security, management efficiency, and storage optimization.
+
+
+
+installation of xampp using linux:
+cd downloads
+ls
+chmod +x pathofits
+sudo ./pathofits
+
+when we are opening the xampp we have to follow this rules
+cd /opt/lampp
+ls
+sudo ./manager-linux
+
+what are servlets?
+which used to send the dynamic data
+to run servlets we need tomcat 
+
+what is tomcat ?
+its a opensource webserver(basically used to run jsp, java )
+we need a container where we run servelet thst is tomct
+tomcat = servelts container + http protocols
+
+and learned some basic comands of linux
+
+
+
+. Web Server basically consists of space which has been 
+ purchased by the owner, whereas with 
+cloud computing, you’re using applications
+ (like email, word processing, spreadsheet, photo editing)
+ that are located on a remote server somewhere, but using 
+them as if they were programs on your computer. 
+Google Apps (Google Documents, etc.) would be a
+ good example of that.
+
+
+different types of web servers like Dedicated web server, Shared web servers,Reseller web servers etc. 
+but in cloud 
+
+
+
+
+
+
+
+
+
