@@ -1,0 +1,60 @@
+1)numberof ports in system?
+total of 65,535 TCP Ports and another 65,535 UDP ports.
+2)what are the main ports?
+Port Number
+20-------File Transfer Protocol (FTP) Data Transfer
+
+21-------File Transfer Protocol (FTP) Command Control
+
+22-------Secure Shell (SSH)
+
+23-------Telnet - Remote login service, unencrypted text messages
+
+25-------Simple Mail Transfer Protocol (SMTP) E-mail Routing
+
+53-------Domain Name System (DNS) service
+
+80-------Hypertext Transfer Protocol (HTTP) used in World Wide Web
+
+110------Post Office Protocol (POP3) used by e-mail clients to retrieve e-mail from a server
+
+119------Network News Transfer Protocol (NNTP)
+
+123------Network Time Protocol (NTP)
+
+143------Internet Message Access Protocol (IMAP) Management of Digital Mail
+
+161------Simple Network Management Protocol (SNMP)
+
+194------Internet Relay Chat (IRC)
+
+443------HTTP Secure (HTTPS) HTTP over TLS/SSL
+
+3)what are software ports?
+ a port is a logical construct that identifies a specific process or a type of network service.
+
+4)what are subnets?
+A subnet, or subnetwork, is a network inside a network. Subnets make networks more efficient. Through subnetting, network traffic can travel a shorter distance without passing through unnecessary routers to reach its destination.
+
+5)what is public and public subnet?
+
+public subnet has the route for internet
+
+private doesnot have route
+6)what is EBS?
+Amazon Elastic Block Store provides raw block-level storage that can be attached to Amazon EC2 instances and is used by Amazon Relational Database Service
+
+7)differnce between s3 and EBS?
+both are used for storage , but ebs is used in ec2 only and also it cant access all regions 
+but in s3 it can be accessed by anywhere not only ec2 and also any region can access
+The files within an S3 bucket can be retrieved using HTTP protocols and even with BitTorrent
+many holdes files for accessability for http client.
+we need some type of softwares to read or write in s3
+but in ebs a volume can be mounted (like harddisk)thatto ithas limit of 20 volumnes
+and each one can store 1TB of data.but s3 has 100 buckets with unlimited capacity.
+8)What is IPv4?
+IP stands for Internet Protocol and v4 stands for Version Four (IPv4). IPv4 was the primary version brought into action for production within the ARPANET in 1983.
+IP version four addresses are 32-bit integers which will be expressed in hexadecimal notation.
+9)what is ip6?
+IPv6 or Internet Protocol Version 6 is a network layer protocol that allows communication to take 
+place over the network. IPv6 was designed by Internet Engineering Task Force (IETF) in December 1998 with the purpose of superseding the IPv4 due to the global exponentially growing internet user
