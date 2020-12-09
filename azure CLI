@@ -1,0 +1,33 @@
+Resource type	                                  Azure CLI command group
+Resource group                                 	    az group
+Virtual machines                                	  az vm
+Storage accounts                                  	az storage account
+Key Vault	                                          az keyvault
+Web applications	                                  az webapp
+SQL databases	                                      az sql server
+CosmosDB	                                          az cosmosdb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+az vm list-ip-addresses -g <RESOURCE-GROUP> -n <VIRTUAL-MACHINE-NAME>
+
+The CLI offers an interactive mode that automatically displays help information and makes it easier to select subcommands. You enter interactive mode with the az interactive command.
