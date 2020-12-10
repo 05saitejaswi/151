@@ -1,0 +1,99 @@
+ create an App Service Web App
+On the homepage, click "Create a resource"
+Search for "Web App"
+Click "Create"
+Select your subscription
+Select your resource group "resource-group-west"
+Enter a name for your web app—This needs to be a unique name and is unique to Azure as a whole and not just your Azure account. I used "hello-world1234" as my unique name.
+For Publish, select "Code"
+For the "Runtime Stack", select "Python 3.7" or greater.
+For the "Operating System" select "Linux"
+Select a region for your app service
+Create a new App Service Plan. You can keep the default name Azure gives you or you can create your own name.
+For SKU and size, select "F1" (Free).
+Click "Review + Create"
+Click "Create"
+
+
+To deploy an App Service from a GitHub repository, I did the following:
+
+Go to Deployment Center
+Choose GitHub
+Choose org and repo
+Go through the prompts; deployment takes a few minutes
+Go to URL of web app and should see the app deployed
+
+Create an App Service Web App
+Create an App Service Web App with the following configuration:
+
+Resource-Group: resource-group-west
+Web App Name: unique name
+Publish: Code
+Runtime stack: Python 3.7
+Operating System: Linux
+Region: West US or the closest region to you
+App Service Plan: Default name or Create new with a name of your choice
+SKU and size: F1 (Free)
+Note: Azure free account only allows one Linux App Service of size F1. You will need to delete the App Service along with the App Service Plan after this exercise since we will create other Linux App Services throughout this course.
+
+Deploy the App Service Web App
+It’s finally time to deploy some code to Azure! Download the web app code provided here.
+
+Create a new repo and push the web app code to the repo
+On Azure portal in the Deployment Center, deploy the web app from GitHub
+Navigate to the deployed URL
+
+
+
+
+
+
+Steps to Create and Deploy an App Service Web App from a Directory using Azure CLI:
+
+Sign in to Azure az login
+cd to web directory
+Run the following command:
+
+az webapp up \
+ --resource-group resource-group-west \
+ --name hello-world1234 \
+ --sku F1 \
+ --verbose
+If you visit the URL, you should see your site deployed.
+
+If you want to update your app, make changes to your code and then run (Note: this may not update new requirements you may have added):
+
+az webapp up \
+ --name hello-world1234 \
+ --verbose
+Alternatively, you can create the initial web app from the Portal as shown in the below screenshot (and then deploy code to it separately, as shown in the earlier video).
+
+An example of creating the App Service in the Portal. A subscription is selected with the same resource group as before. The app service is named `linux-app-west` (or whatever you would like), with "Publish" set to "Code" on Python 3.7, Linux, and the West US region. A new app service plan is created, on the Free F1 tier.
+An example of creating the App Service in the Portal
+
+Cleanup
+If we no longer need a resource, we can delete them through the portal. The quickest way to do this from the CLI is to delete the resource group. This will delete all resources in that group
+
+az group delete -n resource-group-west
+
+Alternatively, if you want to just delete the App Service and App Service plan individually, you can do so with the following commands:
+
+Delete an App Service
+
+az webapp delete \
+    --name hello-world1234 \
+    --resource-group resource-group-west
+Delete an App Service plan
+
+az appservice plan delete \
+    --name [App Service Plan Name] \
+    --resource-group resource-group-west
+    
+    
+    
+    
+    
+    QUIZ QUESTION
+You've built a web app, and deployed it with az webapp up, but seem to be getting an ImportError when actually trying to access the application. What change do you need to make to the app for it to work?
+
+ you just missed including the library in a requirements.txt file for the app, or including the appropriate version of that library containing a function you need. Note that you'll want to update the app, or delete it and re-run az webapp up, as that command otherwise might not replace the file and install the new dependencies.
