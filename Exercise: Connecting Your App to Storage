@@ -49,3 +49,28 @@ Why to Use a Random Filename
 You might be wondering why a random filename was chosen for our blob upload. Well, let's say you've created an app, and uploaded a tiger.png file to it. You give access to some of your friends to add more animals to it, and as a joke, they upload a picture of an elephant under the name tiger.png as well. Your original tiger image would be deleted and replaced.
 
 Even outside of a friendly joke, it's quite likely as your app scales up to thousands (and hopefully millions!) of users, they will be uploading files with the same names as others, if you don't randomize them. With unique, random filenames, you won't have to worry about this issue.
+
+
+
+
+
+
+
+conclustion
+Key Term	Definition
+Azure SQL Server	Azure SQL Databases must first have a SQL Server on which the database will be created. Multiple databases can be created on a single server.
+Azure SQL Database	Used for storing structured, relational data.
+Blob	A data type that can store unstructured (binary) data, and is used to store things like images or videos in a database. Blob is short for Binary Large Object.
+Storage Account	This is the highest level of storage hierarchy for data objects like blobs, files, queues, and tables.
+Container	A level of the storage hierarchy that helps organize blobs, such as splitting between image and video blobs. There can be multiple containers to one storage account.
+Blob Storage	Use only for storing blob data.
+Table Storage	Stores structured, non-relational data.
+File Storage	Utilized for file sharing storage solutions.
+Disk Storage	Utilized for disk-based storage, such as hard drive and solid-state memory disks.
+Data Lake Storage	Utilized for data lakes used in big data analytics.
+Hot Storage	Used for storing frequently accessed data.
+Cool Storage	Used for storing infrequently accessed data and stored for at least 30 days.
+Archive Storage	Used for storing data that will be rarely accessed and stored for at least 180 days. Access time latency may be very high.
+HPC Cache	A cache used for faster access to certain data used for high performance compute, while leaving the rest of large datasets in other storage options.
+CosmosDB	Azure's non-relational database service, capable of using different non-relational databases like MongoDB and Cassandra (covered in a later course).
+Retention	How long to store a given piece of data or file for, such as 30 days.
