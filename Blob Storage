@@ -1,0 +1,61 @@
+Blob Storage Accounts, you may need to know what a Blob is in the first place.
+
+A Binary Large Object or Blob is a data type that can store unstructured (binary) data and is used to store things like images or videos in a database. Blobs are not the go-to choice when it comes to structured data that is queried frequently, such as user profile information. They have higher latency than memory and local disk and don't have the indexing features that make databases efficient at running queries. Blobs are commonly used in combination with databases to store non-queryable data, such as a profile picture for a user's profile. Each user record in the database would include the URL of the blob containing the user's photo.
+
+Azure Storage Accounts
+An Azure storage account can store data objects you create, such as blobs and files. This storage account provides a unique namespace in Azure for your data, and every item that you store has an address that includes your unique account name. It’s worth noting the name of the storage account can contain only lowercase letters and numbers.
+
+In this course, you'll mostly utilize General-purpose v2 storage accounts, which provide support and the latest features for Azure Storage services such as blobs, Data Lake Gen2, Files, Disks, Queues, and Tables. This type of storage account is recommended for most scenarios when using Azure Storage services.
+
+Storage accounts can contain multiple blob containers within them, such as "images" and "movies" containers, to organize different data files. From there, each container can have many blobs inside of them (the files themselves).
+
+The Blob Storage Hierarchy - "Udacity" is the storage account, with "Pictures" and "Videos" as containers, each with more than one blob inside.
+The Blob Storage Hierarchy - "Udacity" is the storage account, with "Pictures" and "Videos" as containers, each with more than one blob inside.
+
+Blob Storage Lifecycle
+In an earlier video, we discussed blob storage tiers—hot, cold, and archive. These are set based on how frequently data will be accessed, with hot accessed the most frequently, with relatedly lower latency for requests, but higher costs.
+
+Blob storage offers a rule-based policy you can use to transition your data between these tiers to optimize performance and cost. This is shown again in the below graphic - while your blobs may start in a Hot container, they could be moved to a Cool container if they have not been modified in the past 30 days. From there, if they have not been modified in 90 days, they could be transitioned to Archive storage; you could then perhaps delete them after a year of non-usage.
+
+The blob storage lifecycle
+The blob storage lifecycle
+
+QUESTION 1 OF 2
+True or False: Blob Storage and SQL Databases can be used interchangeably.
+
+
+
+
+
+Creating Blob Storage in the Portal
+
+To create a blob storage account on Azure Portal, I did the following:
+
+Create a Storage Account in Azure:
+
+Click Create a resource
+Search for storage account
+Select the appropriate subscription and resource group (likely “resource-group-west”).
+Enter a storage account name, note—it can only be lowercase letters and numbers. “helloworld1234”
+Set the location to West US 2 to match the resource group.
+Leave "Performance" as Standard, while making sure "Account kind" is StorageV2. This could also be BlobStorage, but StorageV2 is preferred.
+We’ll leave replication on the default setting
+Set "Access tier" to Cool - in a live production app, you may need this to be Hot, but in our case, Cool will work just fine.
+Click "Next: Networking" to confirm that the storage account is using a Public endpoint (all networks)
+Click "Next: Data Protection", "Next: Advanced", then set "Blob public access" to "Enabled".
+Click "Review + Create" and then "Create" to create the database, then wait for it to deploy.
+To add a Blob Container called images:
+
+Once the Storage account is deployed, click on its name to access it (you may need to go back to the main "Storage accounts" page in Azure).
+Click on the "Containers" button in the storage account's "Overview" page.
+Click "+ Container", then add the name of images.
+Set "Public access level" to Container, and click "Create".
+NOTE: I had to refresh my page a few times before I could access the container.
+
+Adding Images to the Container
+To add an image to the Blob Container:
+
+Click on the container named images.
+Click "Upload", and add an image of your choosing.
+Once the image appears within the container view, click on it, and copy the "URL" property.
+Paste the URL into your browser to see if the image appropriately loads.
