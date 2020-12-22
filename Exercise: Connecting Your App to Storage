@@ -21,3 +21,31 @@ Mac users may need to install unixodbc as well as related drivers as shown below
   brew install unixodbc
 Check here to add SQL Server drivers for Mac. This StackOverflow post may also help resolve certain issues.
 Supporting Materials
+
+
+Solution: Connecting Your App to Storage
+
+To connect with the SQL Database:
+
+Within config.py, fill out the:
+SQL_SERVER with the URL of your SQL Server, e.g. {YOUR-SQL_SERVER}.database.windows.net
+SQL_DATABASE with the name of your SQL Database
+SQL_USER_NAME with the username for your SQL Server
+SQL_PASSWORD with the password for your SQL Server
+To connect to the Blob Storage Container:
+
+Within config.py, fill out the:
+BLOB_ACCOUNT with the name of your storage account (above the container level)
+BLOB_STORAGE_KEY with the primary access key for your storage account. From the Azure portal, navigate to the storage account, and then under "Setting", click on "Access keys". Copy and paste the "Key" under "key1", including the double equal signs ("==") at the end.
+BLOB_CONTAINER with the name of your blob container, likely images
+Within models.py, you'll need to use the BlobServiceClient called blob_service to get a Blob Client using the container name and related filename, and then either upload or delete the blob as follows:
+ try:
+     blob_client = blob_service.get_blob_client(container=blob_container, blob=filename)
+     blob_client.upload_blob(file)
+     if self.image_path: # Get rid of old image, since it's replaced
+         blob_client = blob_service.get_blob_client(container=blob_container, blob=self.image_path)
+         blob_client.delete_blob()
+Why to Use a Random Filename
+You might be wondering why a random filename was chosen for our blob upload. Well, let's say you've created an app, and uploaded a tiger.png file to it. You give access to some of your friends to add more animals to it, and as a joke, they upload a picture of an elephant under the name tiger.png as well. Your original tiger image would be deleted and replaced.
+
+Even outside of a friendly joke, it's quite likely as your app scales up to thousands (and hopefully millions!) of users, they will be uploading files with the same names as others, if you don't randomize them. With unique, random filenames, you won't have to worry about this issue.
