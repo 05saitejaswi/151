@@ -37,7 +37,6 @@ When you create an Auto Scaling group, you can set the minimum number of Amazon 
 created the Auto Scaling group. In this example, the Auto Scaling group has a minimum capacity of one Amazon EC2 instance.
 
 
-
 Next, you can set the desired capacity at two Amazon EC2 instances even though your application needs a minimum of a single Amazon EC2 instance to run.
 
 If you do not specify the desired number of Amazon EC2 instances in an Auto Scaling group, the desired capacity defaults to your minimum capacity.
@@ -45,17 +44,9 @@ If you do not specify the desired number of Amazon EC2 instances in an Auto Scal
 The third configuration that you can set in an Auto Scaling group is the maximum capacity. For example, you might configure the Auto Scaling group to scale out in response to increased demand,
 but only to a maximum of four Amazon EC2 instances.
 
-
-
 https://content.aws.training/wbt/cecpe3/en/x8/1.0.0/assets/y6flBiwPcbjVHrNC_EVco4LYrtdoEY2Je.png
 
 
-
-
-
-
-
-
-
-
 Because Amazon EC2 Auto Scaling uses Amazon EC2 instances, you pay for only the instances you use, when you use them. You now have a cost-effective architecture that provides the best customer experience while reducing expenses.
+
+
